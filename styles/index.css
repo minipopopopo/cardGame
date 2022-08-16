@@ -1,0 +1,154 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+html,
+body {
+  /* @apply bg-gray-500 dark:bg-gray-900; */
+}
+
+/* Write your own custom component styles here */
+.btn-blue {
+  @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
+.font-sans {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+}
+.font-serif {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+.font-mono {
+  font-family: 'IBM Plex Mono', 'Noto Sans Mono', ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+.font-title {
+  font-size: 1.25em;
+  line-height: 1.25em;
+  padding-top: 0.375em;
+  margin-bottom: 0.375em;
+  font-weight: bold;
+}
+.font-title.font-serif {
+  transform: scaleY(0.95);
+  transform-origin: 0 0;
+  line-height: 1.25em;
+  margin-bottom: 0.1em;
+}
+.font-title.font-sans {
+  line-height: 1.075em;
+  padding-bottom: 0.13em;
+  margin-bottom: 0.28em;
+  letter-spacing: 0.02em;
+}
+.font-title.font-mono {
+  font-size: 1.15em;
+  line-height: 1.175em;
+  padding-top: 0.45em;
+  margin-bottom: 0.4em;
+  letter-spacing: -0.04em;
+}
+.font-description {
+  font-size: 0.75em;
+  line-height: 1.25em;
+}
+.font-meta {
+  font-size: 0.5em;
+  line-height: 1.25em;
+}
+
+.patterns {
+  /* background-image: url('/geometry.png'); */
+  /* background-image: url('/geot@2x.png'); */
+  /* background-image: url('/gl.png'); */
+  background-image: url('/gp.png');
+  /* background-size: 48rem; */
+
+  /* background-image: url('/playstation-pattern.png'); */
+  /* background-size: 32rem; */
+
+  /* background-image: url('/light_toast-50.png'); */
+  /* background-size: 32rem; */
+}
+
+div.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: repeating-linear-gradient(
+    -55deg,
+    #fff6f4,
+    #fff6f4 10px,
+    #fff2ee 10px,
+    #fff2ee 20px
+  );
+}
+
+.box {
+  box-shadow: 0 0 0 0 white, 0 2px 2px rgba(0, 0, 0, 0.05),
+    0 0 10px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.15),
+    0 6px 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.15),
+    0 20px 20px rgba(0, 0, 0, 0.2), 0 40px 40px rgba(0, 0, 0, 0.15);
+}
+
+.box-sm {
+  box-shadow: 0 0 0 0 white, 0 2px 2px rgba(0, 0, 0, 0.05),
+    0 0 10px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.15),
+    0 6px 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.box-pink {
+  box-shadow: 0 0 0 0 white, 0 2px 2px rgba(55, 0, 55, 0.05),
+    0 0 10px rgba(55, 0, 55, 0.01), 0 2px 6px rgba(55, 0, 55, 0.1),
+    0 6px 10px rgba(55, 0, 55, 0.01), 0 10px 10px rgba(55, 0, 55, 0.1),
+    0 20px 15px rgba(55, 0, 55, 0.1), 0 40px 30px rgba(55, 0, 55, 0.05);
+}
+
+.box-pink-sm {
+  box-shadow: 0 0 0 0 white, 0 2px 2px rgba(55, 0, 55, 0.05),
+    0 0 10px rgba(55, 0, 55, 0.01), 0 2px 6px rgba(55, 0, 55, 0.1),
+    0 6px 10px rgba(55, 0, 55, 0.01), 0 10px 20px rgba(55, 0, 55, 0.05);
+}
+
+.og {
+  border: 8px solid black;
+  box-shadow: -8px 0 0 0 #7801fd, -16px 0 0 0 #f804ef, -24px 0 0 0 #f3b0a0;
+}
+.og-parent {
+  box-shadow: 0 0 0 8px white;
+}
+
+.input {
+  border: 2px solid #f3b0a0;
+}
+.input:focus {
+  border: 2px solid #7801fd;
+}
+
+.underline-heart {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/78779/heart.png');
+  background-position: 2px 16px;
+  background-size: 15px 9px;
+  background-repeat: repeat-x;
+  padding-bottom: 20px;
+  color: #e62000;
+}
+
+body {
+  /* Always show scrollbar, not super nice, but better than layout shift on load */
+  overflow-y: scroll;
+}
